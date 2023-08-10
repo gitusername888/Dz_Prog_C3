@@ -4,12 +4,38 @@
 // 32679 -> 6
 
 Console.WriteLine("Введите число");
-int num = Convert.ToInt32( Console.ReadLine() );
+int num1 = Convert.ToInt32( Console.ReadLine() );
+
+int result1 = Math.Sign(num1); //-1
+int i = 0;
+if (result1 == -1) {
+    num1 = num1*-1;
+}
+if (num1/10 >= 10)
+{
+    
+   int k = num1/10;
+    while (k > 99)
+    {
+        k = k/10;
+        i++;
+    }
+    double num2 = Math.Pow(10, i);
+    
+    double num3 = Math.Floor(num1/num2);
+    int num4 = Convert.ToInt32 (num3);
+    int ost100 = num4%10;
+    
+    
+    Console.WriteLine($"{num1} -> {ost100}");
+} 
+else 
+{
+    Console.WriteLine($"{num1} -> третий цифры нет ");
+}
 
 
-int digital1 = num % 100;
-int digital2 = num % 10;
-int dig = (digital1 - digital2)/10;
 
 
-Console.WriteLine ($"{num} -> {dig}");
+
+
