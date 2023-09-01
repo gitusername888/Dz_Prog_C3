@@ -36,5 +36,5 @@ return sum;
 
 System.Console.WriteLine("Введите число:");
 int num = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine($"{num} ->{digitnum(num)}");
+System.Console.WriteLine($"{num} -> {digitnum(num)}");
 
