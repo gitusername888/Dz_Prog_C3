@@ -11,7 +11,7 @@ void PrintArray(int[] array)
 {
     System.Console.Write("[");
     foreach (int item in array)
-        System.Console.Write($"{item}");
+        System.Console.Write($" ,{item}");
     System.Console.Write("]");
 }
 
