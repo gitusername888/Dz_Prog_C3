@@ -9,8 +9,10 @@ void FillArray(int[] array)
 
 void PrintArray(int[] array)
 {
+    System.Console.Write("[");
     foreach (int item in array)
-        System.Console.Write($"{item} ");
+        System.Console.Write($"{item}");
+    System.Console.Write("]");
 }
 
 int Even(int[] array)
@@ -22,7 +24,10 @@ int Even(int[] array)
     return count;
 }
 
-int[] array = new int[4];
+Console.WriteLine("Введите колличество числел в массиве");
+int number = Convert.ToInt32( Console.ReadLine() );
+
+int[] array = new int[number];
 
 FillArray(array);
 PrintArray(array);
