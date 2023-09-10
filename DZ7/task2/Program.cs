@@ -67,11 +67,11 @@ void PrintArray(int[,] matrix)
 int[,] CreateIncreasingMatrix(int n, int m, int k)
 {
   // Введите свое решение ниже
-  int[,] matrix = new int[m, n];
+  int[,] matrix = new int[n, m];
   int increse = 1;
-  for (int i = 0; i < m; i++)
+  for (int i = 0; i < n; i++)
   {
-    for (int j = 0; j < n; j++)
+    for (int j = 0; j < m; j++)
     {
       matrix[i, j] = increse;
       increse = increse + k;
@@ -116,11 +116,16 @@ void PrintCheckIfError(int[] results, int X, int Y)
 
 
 
-int n = 3;
-int m = 4;
-int k = 2;
-int x = 8;
-int y = 3;
+int n = 4;
+// '4'
+// '5'
+// '3'
+// '2'
+// '2'
+int m = 5;
+int k = 3;
+int x = 2;
+int y = 2;
 
 
 // Не удаляйте строки ниже
