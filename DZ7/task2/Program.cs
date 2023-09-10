@@ -52,79 +52,79 @@
 // */
 
 
-    void PrintArray (int [,] matrix)
+void PrintArray(int[,] matrix)
+{
+  // Введите свое решение ниже
+  for (int i = 0; i < matrix.GetLength(0); i++)
+  {
+    for (int j = 0; j < matrix.GetLength(1); j++)
+      System.Console.Write($"{matrix[i, j]}\t");
+    System.Console.WriteLine();
+  }
+
+}
+
+int[,] CreateIncreasingMatrix(int n, int m, int k)
+{
+  // Введите свое решение ниже
+  int[,] matrix = new int[m, n];
+  int increse = 1;
+  for (int i = 0; i < m; i++)
+  {
+    for (int j = 0; j < n; j++)
     {
-      // Введите свое решение ниже
- for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-            System.Console.Write($"{matrix[i,j]}\t");
-        System.Console.WriteLine();
-        }
-
+      matrix[i, j] = increse;
+      increse = increse + k;
     }
-  
-     int[,] CreateIncreasingMatrix(int n, int m, int k)
-    {
-      // Введите свое решение ниже
-int[, ] matrix = new int [m,n];
-    int increse = 1;
-     for (int i = 0; i < m; i++)
-     {
-        for (int j = 0; j < n; j++)
-        {
-        matrix [i,j] = increse;
-        increse = increse +k;
-           }
-     }
- return matrix; 
-    }
-  
-    int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
-    {  
-      // Введите свое решение ниже
-    //   int x = 2;
-    //       int y = 3;
-    
-    int rows = matrix.GetUpperBound(0) + 1;    // количество строк
-    int columns = matrix.Length / rows;        // количество столбцов
-    int [] array = new int [2];
-        if (rowPosition > rows ||  columnPosition > columns)
-        {
-            array [0] = 0;
-            array [1] = 0;
-            return array;
-        }
-        else 
-        {
-          int num = matrix[rowPosition-1,columnPosition-1];
-            array [0] = num;
-            array [1] = 0;
-            return array;
-        }
-    }
+  }
+  return matrix;
+}
 
-    void PrintCheckIfError (int[] results, int X, int Y)
-    {
-      // Введите свое решение ниже
-        if (results [0] == 0 && results [1] == 0)
-        System.Console.WriteLine("There is no such index");
-        else 
-        System.Console.WriteLine($"The number in [{X}, {Y}] is {results [0]}");
+int[] FindNumberByPosition(int[,] matrix, int rowPosition, int columnPosition)
+{
+  // Введите свое решение ниже
+  //   int x = 2;
+  //       int y = 3;
 
-        }
-    
+  int rows = matrix.GetUpperBound(0) + 1;    // количество строк
+  int columns = matrix.Length / rows;        // количество столбцов
+  int[] array = new int[2];
+  if (rowPosition > rows || columnPosition > columns)
+  {
+    array[0] = 0;
+    array[1] = 0;
+    return array;
+  }
+  else
+  {
+    int num = matrix[rowPosition - 1, columnPosition - 1];
+    array[0] = num;
+    array[1] = 0;
+    return array;
+  }
+}
+
+void PrintCheckIfError(int[] results, int X, int Y)
+{
+  // Введите свое решение ниже
+  if (results[0] == 0 && results[1] == 0)
+    System.Console.WriteLine("There is no such index");
+  else
+    System.Console.WriteLine($"The number in [{X}, {Y}] is {results[0]}");
+
+}
 
 
-          int n = 3;
-          int m = 4;
-          int k = 2;
-          int x = 8;
-          int y = 3;
+
+int n = 3;
+int m = 4;
+int k = 2;
+int x = 8;
+int y = 3;
 
 
-        // Не удаляйте строки ниже
-        int[,] result = CreateIncreasingMatrix(n, m, k);
-        PrintArray(result);
-        PrintCheckIfError(FindNumberByPosition(result, x, y), x, y);
-    
+// Не удаляйте строки ниже
+int[,] result = CreateIncreasingMatrix(n, m, k);
+PrintArray(result);
+PrintCheckIfError(FindNumberByPosition(result, x, y), x, y);
+
