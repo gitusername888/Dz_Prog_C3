@@ -66,7 +66,7 @@ if (sumArray[i] == maxValue) result = i+1;
 System.Console.WriteLine($"{result} строка");
 }
 
-int m = 3;
+int m = 4;
 int n = 4;
 int minLimitRandom = 0;
 int maxLimitRandom = 10;

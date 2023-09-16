@@ -8,7 +8,7 @@
 
 int[,] CreateRandomMatrix(int m, int n, int minLimitRandom, int maxLimitRandom)
 {
-    // Введите свое решение ниже
+
     int[,] matrix = new int[m, n];
 
     for (int i = 0; i < m; i++)
@@ -23,7 +23,7 @@ int[,] CreateRandomMatrix(int m, int n, int minLimitRandom, int maxLimitRandom)
 
 void PrintArray(int[,] matrix)
 {
-    // Введите свое решение ниже
+ 
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -36,8 +36,7 @@ void PrintArray(int[,] matrix)
 
 void MatrixMultiplication (int[,] value1, int[,] value2 )
 {
-    // int[,] matrixMultiplication = new int [value1.GetLength(0), value1.GetLength(1)];
-    // int multiplication = 0;
+    
     int j = 0;
      int i = 0;
         
@@ -65,7 +64,7 @@ int maxLimitRandom = 10;
 
 int[,] value1 = CreateRandomMatrix(m, n, minLimitRandom, maxLimitRandom);
 PrintArray(value1);
-System.Console.WriteLine("");
+System.Console.WriteLine("   *");
 int[,] value2 = CreateRandomMatrix(m, n, minLimitRandom, maxLimitRandom);
 PrintArray(value2);
  MatrixMultiplication (value1, value2);
